@@ -130,7 +130,6 @@ input[type=button]{
 .account {
     position: relative;
     left: 20px;
-    bottom: 10px;
 }
 button{
     background: none;
