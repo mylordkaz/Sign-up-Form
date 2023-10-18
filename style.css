@@ -41,5 +41,26 @@ body{
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+label {
+    text-align: left;
+    display: block;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.button {
+    grid-column: 1 / -1;
+    text-align: center;
+    width: max-content; 
+    margin: 0 auto; 
 }
