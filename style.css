@@ -42,6 +42,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 30px;
 }
 form{
     display: grid;
@@ -87,4 +88,33 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+input[type=button]{
+    padding: 6px 12px;
+    font-size: 2rem;
+    background-color: #000000;
+    color: rgba(89, 126, 204);
+    border: 1px solid rgba(89, 126, 204);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(89, 126, 204),
+                     0 0 25px rgba(89, 126, 204),
+                     0 0 50px rgba(89, 126, 204); 
+                     /* 0 0 200px rgba(89, 126, 204); */
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+/* input[type=text]:valid,
+input[type=email]:valid,
+input[type=number]:valid,
+input[type=password]:valid {
+    border: 1px solid rgb(89, 204, 116);
+    box-shadow: 0px 2px 20px 2px rgba(89, 204, 116, 1);
+    outline: none
+} */
+input[type=text]:invalid,
+input[type=email]:invalid,
+input[type=number]:invalid,
+input[type=password]:invalid {
+    border: 1px solid rgb(204, 89, 89);
+    box-shadow: 0px 2px 20px 2px rgb(204, 89, 89);
+    outline: none
 }
