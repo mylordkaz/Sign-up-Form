@@ -1,0 +1,9 @@
+body{
+    background-image: url(/darkLightBg.jpg);
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
