@@ -24,8 +24,8 @@
                             <label>Last Name <input type="text" name="lastname"></label>
                             <label for="email">E-mail <input type="email" name="email" id="email" ></label>
                             <label for="phone">Phone number <input type="number" name="phone" id="phone" ></label>
-                            <label for="pwd">Password <input type="password" name="password"id="pwd" ></label>
-                            <label for="c-pwd">Confirm Password <input type="password" name="c-pwd"id="c-pwd" ></label>
+                            <label for="password">Password <input type="password" name="password"id="password" required pattern=".{8,}"></label>
+                            <label for="confirmPassword">Confirm Password <input type="password" name="c-pwd"id="confirmPassword" required ></label>
                             <div class="button">
                                 <label><input type="submit" value="create"></label>
                             </div>
@@ -37,6 +37,22 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            let password = document.getElementById('password');
+            let confirmPassword = document.getElementById('confirmPassword')
+
+            function validatePassword(){
+                if(password.value !== confirmPassword.value){
+                    confirmPassword.setCustomValidity("Passwords Don't Match");
+                    confirmPassword.classList.add('error')
+                } else {
+                    confirmPassword.setCustomValidity("")
+                }
+            }
+            password.onchange = validatePassword;
+            confirmPassword.onkeyup = validatePassword;
+        </script>
             
         </body>
 </html>
